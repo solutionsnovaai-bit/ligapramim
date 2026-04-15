@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Liga Pra Mim — Agente de voz com inteligência artificial que liga, conversa e qualifica seus leads automaticamente, 24 horas por dia.">
+<title>Liga Pra Mim — LabFuture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="logo">
+    <div class="logo-bars">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    LabFuture
+  </a>
+  <div class="nav-right">
+    <a href="#oferta" class="btn-demo">Reservar Demo</a>
+    <button class="nav-account" aria-label="Conta">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-gradient"></div>
+  <img class="hero-image" src="assets/hero.png" alt="Agente de voz LabFuture" loading="eager">
+  <div class="hero-content">
+    <p class="hero-eyebrow">seu negócio ligando enquanto você dorme</p>
+    <h1 class="hero-title">LIGA<br>PRA<br>MIM!</h1>
+    <div class="hero-tags">
+      <span class="tag-pill">Prospecção Automática</span>
+      <span class="tag-pill">Ligações Simultâneas</span>
+      <span class="tag-pill">Qualificação Automática</span>
+      <span class="tag-pill">Agendamento Direto</span>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">scroll</span>
+  </div>
+  <!-- corner sparkle -->
+  <div class="hero-sparkle" aria-hidden="true">✦</div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker">
+    <span class="ticker-item">Prospecção Automática<span class="tdot"></span></span>
+    <span class="ticker-item">Ligações Simultâneas<span class="tdot"></span></span>
+    <span class="ticker-item">Qualificação Automática<span class="tdot"></span></span>
+    <span class="ticker-item">Escala Infinita<span class="tdot"></span></span>
+    <span class="ticker-item">Zero Funcionário Extra<span class="tdot"></span></span>
+    <span class="ticker-item">Agendamento Direto<span class="tdot"></span></span>
+    <span class="ticker-item">Atendimento 24/7<span class="tdot"></span></span>
+    <span class="ticker-item">Liga Pra Mim — LabFuture<span class="tdot"></span></span>
+    <span class="ticker-item">Prospecção Automática<span class="tdot"></span></span>
+    <span class="ticker-item">Ligações Simultâneas<span class="tdot"></span></span>
+    <span class="ticker-item">Qualificação Automática<span class="tdot"></span></span>
+    <span class="ticker-item">Escala Infinita<span class="tdot"></span></span>
+    <span class="ticker-item">Zero Funcionário Extra<span class="tdot"></span></span>
+    <span class="ticker-item">Agendamento Direto<span class="tdot"></span></span>
+    <span class="ticker-item">Atendimento 24/7<span class="tdot"></span></span>
+    <span class="ticker-item">Liga Pra Mim — LabFuture<span class="tdot"></span></span>
+  </div>
+</div>
+
+<!-- REFRAME -->
+<section class="reframe">
+  <div class="inner reframe-grid">
+    <div class="reframe-left">
+      <div class="section-label reveal">O sistema</div>
+      <h2 class="section-title reveal rd1">Imagine um<br><span class="accent-cyan">sistema</span><br>que nunca<br><span class="accent-violet">para.</span></h2>
+    </div>
+    <div class="reframe-right">
+      <p class="reveal rd2"><strong>Nunca perde um lead.</strong> Todo contato que chega recebe resposta imediata — independente de hora, dia ou volume.</p>
+      <p class="reveal rd3"><strong>Nunca depende de horário comercial.</strong> Seu negócio opera enquanto você dorme, viaja ou descansa.</p>
+      <p class="reveal rd4"><strong>Nunca varia a qualidade do atendimento.</strong> Cada ligação com o mesmo padrão, o mesmo processo, a mesma excelência.</p>
+      <div class="big-stmt reveal rd5">Isso não é equipe.<br>É infraestrutura de crescimento.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="inner">
+    <div class="features-header">
+      <div class="section-label reveal" style="justify-content:center;">Liga Pra Mim</div>
+      <h2 class="section-title reveal rd1" style="text-align:center;">Seu novo agente<br><span class="accent-blue">de voz</span></h2>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card reveal">
+        <span class="feat-num">01</span>
+        <div class="feat-icon" style="color:var(--cyan);">📞</div>
+        <div class="feat-title">Atende 24/7</div>
+        <p class="feat-desc">Sem interrupções, sem atrasos. Seu agente está sempre ativo, em qualquer horário, qualquer dia do ano.</p>
+      </div>
+      <div class="feat-card reveal rd1">
+        <span class="feat-num">02</span>
+        <div class="feat-icon" style="color:var(--violet);">🎯</div>
+        <div class="feat-title">Padrão perfeito</div>
+        <p class="feat-desc">Cada ligação executada exatamente como planejado. Sem improviso, sem variação, sem falhas humanas.</p>
+      </div>
+      <div class="feat-card reveal rd2">
+        <span class="feat-num">03</span>
+        <div class="feat-icon" style="color:var(--amber);">⚡</div>
+        <div class="feat-title">Resposta imediata</div>
+        <p class="feat-desc">Lead entrou? Ligação feita em segundos. A janela de conversão não fecha antes de você agir.</p>
+      </div>
+      <div class="feat-card reveal rd3">
+        <span class="feat-num">04</span>
+        <div class="feat-icon" style="color:var(--blue);">📈</div>
+        <div class="feat-title">Escala ilimitada</div>
+        <p class="feat-desc">Centenas de ligações simultâneas sem custo extra. Cresce com a sua demanda, sem contratar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAL -->
+<section class="diferencial">
+  <div class="inner dif-grid">
+    <div class="dif-left">
+      <div class="section-label reveal">Resultado real</div>
+      <h2 class="section-title reveal rd1">Atraso não<br><span class="accent-violet">compete</span><br>com<br><span class="accent-cyan">automação.</span></h2>
+      <div class="dif-stats">
+        <div class="dif-stat reveal rd2">
+          <div class="dif-num" data-target="78" data-suffix="%">0%</div>
+          <div class="dif-stat-text">
+            <strong>Aumento na taxa de contato</strong>
+            <span>Empresas que respondem em segundos vs. horas.</span>
+          </div>
+        </div>
+        <div class="dif-stat reveal rd3">
+          <div class="dif-num" data-target="5" data-suffix="min">0min</div>
+          <div class="dif-stat-text">
+            <strong>Tempo médio de primeiro contato</strong>
+            <span>Do lead chegar ao primeiro "Olá" do agente.</span>
+          </div>
+        </div>
+        <div class="dif-stat reveal rd4">
+          <div class="dif-num" data-target="3" data-suffix="x">0x</div>
+          <div class="dif-stat-text">
+            <strong>Mais produtividade do time comercial</strong>
+            <span>Seu time fala só com quem já foi qualificado.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dif-right">
+      <p class="reveal">A maioria das empresas perde vendas por um motivo simples: <strong style="color:var(--text);">tempo de resposta.</strong></p>
+      <p class="reveal rd1">Não é falta de leads. Não é falta de interesse. É atraso — e atraso tem custo.</p>
+      <ul class="loss-list reveal rd2">
+        <li>Lead que esperou 1 hora tem 60x menos chance de fechar</li>
+        <li>Time desperdiçando energia com leads frios</li>
+        <li>Follow-ups manuais que ninguém faz direito</li>
+        <li>Oportunidades indo para o concorrente</li>
+      </ul>
+      <div class="hbox reveal rd3">
+        Quando você responde em segundos,<br>
+        o jogo muda completamente.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI -->
+<section class="roi">
+  <div class="inner">
+    <div class="roi-header">
+      <div class="section-label reveal" style="justify-content:center;">Tradução em dinheiro</div>
+      <h2 class="section-title reveal rd1" style="text-align:center;">O que muda quando<br><span class="accent-amber">você responde rápido</span></h2>
+    </div>
+    <div class="roi-cards">
+      <div class="roi-card reveal">
+        <span class="roi-arrow">📊</span>
+        <div class="roi-title">Taxa de contato</div>
+        <p class="roi-desc">Praticamente todos os leads são alcançados. Nenhuma oportunidade escapa por falta de resposta.</p>
+      </div>
+      <div class="roi-card reveal rd1">
+        <span class="roi-arrow">💬</span>
+        <div class="roi-title">Qualidade das conversas</div>
+        <p class="roi-desc">Ligações com contexto, padrão e objetividade. O lead chega preparado para a conversa certa.</p>
+      </div>
+      <div class="roi-card reveal rd2">
+        <span class="roi-arrow">🔒</span>
+        <div class="roi-title">Fechamento acelerado</div>
+        <p class="roi-desc">Ciclo de vendas mais curto. Previsibilidade maior. Receita mais consistente mês a mês.</p>
+      </div>
+    </div>
+    <p class="roi-big reveal rd3">
+      Mais <span class="accent-cyan">previsibilidade.</span><br>
+      Mais <span class="accent-blue">controle.</span><br>
+      Mais <span class="accent-amber">receita.</span>
+    </p>
+  </div>
+</section>
+
+<!-- POSICIONAMENTO -->
+<section class="posicionamento">
+  <div class="inner pos-grid">
+    <div>
+      <div class="pos-visual reveal">
+        <div class="pos-quote-mark">"</div>
+        <div class="pos-quote-text">Isso não substitui seu time. Potencializa.</div>
+        <ul class="pos-checks">
+          <li><span class="xmark">✕</span> Sem leads frios desperdiçando seu time</li>
+          <li><span class="xmark">✕</span> Sem tentativas frustradas de contato</li>
+          <li><span class="xmark">✕</span> Sem follow-ups manuais perdidos</li>
+          <hr style="border:none;border-top:1px solid rgba(0,229,255,.08);margin:6px 0;">
+          <li><span class="cmark">✓</span> Time focado em quem está pronto para comprar</li>
+          <li><span class="cmark">✓</span> Energia no lugar certo, na hora certa</li>
+          <li><span class="cmark">✓</span> Processo escalável sem custo adicional</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pos-points">
+      <div class="section-label reveal">Como funciona</div>
+      <h2 class="section-title reveal rd1">Simples de<br>ativar. <span class="accent-cyan">Difícil</span><br>de ignorar.</h2>
+      <div class="pos-point reveal rd2">
+        <div class="pos-n">01</div>
+        <div class="pos-t">
+          <strong>Integração rápida</strong>
+          <span>Conectamos ao seu CRM ou planilha de leads. Sem complexidade técnica, sem semanas de onboarding.</span>
+        </div>
+      </div>
+      <div class="pos-point reveal rd3">
+        <div class="pos-n">02</div>
+        <div class="pos-t">
+          <strong>Agente treinado no seu negócio</strong>
+          <span>O agente aprende seu produto, seu tom, suas objeções. Cada ligação soa como seu melhor vendedor.</span>
+        </div>
+      </div>
+      <div class="pos-point reveal rd4">
+        <div class="pos-n">03</div>
+        <div class="pos-t">
+          <strong>Resultados desde o dia 1</strong>
+          <span>Lead entra, agente liga, qualifica e agenda. Seu time recebe só as oportunidades quentes.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depos">
+  <div class="inner">
+    <div class="depos-header">
+      <div class="section-label reveal" style="justify-content:center;">Clientes reais</div>
+      <h2 class="section-title reveal rd1" style="text-align:center;">Quem já<br><span class="accent-violet">ativou</span></h2>
+    </div>
+    <div class="depos-grid">
+      <div class="depo-card reveal">
+        <div class="depo-stars">★★★★★</div>
+        <p class="depo-text">"Em 3 dias com o Liga Pra Mim, meu time parou de perder tempo com leads frios. <em>A taxa de agendamento triplicou.</em>"</p>
+        <div class="depo-author">
+          <div class="depo-av">RM</div>
+          <div class="depo-name">
+            <strong>Rafael Mendes</strong>
+            <span>Diretor Comercial — Imobiliária</span>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card reveal rd1">
+        <div class="depo-stars">★★★★★</div>
+        <p class="depo-text">"Antes, leads chegavam de madrugada e ninguém atendia. Agora <em>o agente já ligou antes do sol nascer.</em> Absurdo."</p>
+        <div class="depo-author">
+          <div class="depo-av">CS</div>
+          <div class="depo-name">
+            <strong>Camila Souza</strong>
+            <span>Head de Vendas — EdTech</span>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card reveal rd2">
+        <div class="depo-stars">★★★★★</div>
+        <p class="depo-text">"Melhor investimento que fiz esse ano. <em>ROI em 18 dias.</em> E meu time agora só fala com leads qualificados."</p>
+        <div class="depo-author">
+          <div class="depo-av">PT</div>
+          <div class="depo-name">
+            <strong>Paulo Torres</strong>
+            <span>CEO — Clínica Odontológica</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJEÇÕES -->
+<section class="objecoes">
+  <div class="inner">
+    <div class="obj-header">
+      <div class="section-label reveal" style="justify-content:center;">Dúvidas comuns</div>
+      <h2 class="section-title reveal rd1" style="text-align:center;">Sua dúvida,<br><span class="accent-cyan">respondida.</span></h2>
+    </div>
+    <div class="obj-grid">
+      <div class="obj-card reveal">
+        <div class="obj-q"><span class="obj-qm">?</span>O agente soa robótico?</div>
+        <p class="obj-a">Não. A voz é natural, o fluxo é conversacional. <strong>A maioria dos leads nem percebe que é IA</strong> nas primeiras interações.</p>
+      </div>
+      <div class="obj-card reveal rd1">
+        <div class="obj-q"><span class="obj-qm">?</span>Funciona com meu CRM?</div>
+        <p class="obj-a">Sim. Integramos com os principais CRMs do mercado. <strong>Se você usa planilha, também funciona.</strong> Sem complicação.</p>
+      </div>
+      <div class="obj-card reveal rd2">
+        <div class="obj-q"><span class="obj-qm">?</span>E se o lead quiser falar com humano?</div>
+        <p class="obj-a">O agente identifica o momento certo e <strong>transfere para seu time automaticamente</strong>, com todo o contexto da conversa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="oferta" id="oferta">
+  <div class="oferta-inner">
+    <div class="section-label reveal" style="justify-content:center;">Próximo passo</div>
+    <h2 class="section-title reveal rd1">Ative seu<br><span class="accent-blue">agente</span><br>agora.</h2>
+    <p class="reveal rd2">Marque uma demo de 30 minutos. Mostramos como o Liga Pra Mim funciona no seu negócio — ao vivo, sem enrolação.</p>
+    <div class="oferta-cta-wrap reveal rd3">
+      <a href="#" class="btn-mega">Quero ativar meu agente de voz agora</a>
+      <span class="cta-note">Demo gratuita · Sem compromisso · Resultado em dias</span>
+    </div>
+  </div>
+</section>
+
+<!-- ESCASSEZ -->
+<section class="escassez">
+  <div class="inner escassez-inner">
+    <div class="section-label reveal" style="justify-content:center;">Vagas disponíveis</div>
+    <h2 class="section-title reveal rd1">Poucas vagas<br><span class="accent-amber">este mês.</span></h2>
+    <div class="vagas-bar">
+      <div class="vagas-fill" id="vagasfill"></div>
+    </div>
+    <p class="vagas-label">73% das vagas deste mês já foram preenchidas. Restam <strong>poucos slots</strong>.</p>
+    <div class="reveal rd2" style="margin-top:36px;">
+      <a href="#oferta" class="btn-mega">Garantir minha vaga agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <p class="reveal" style="font-family:'Syne',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px;">Se você gera leads…</p>
+    <h2 class="final-headline reveal rd1">Isso não é<br><span>opcional.</span></h2>
+    <p class="final-sub reveal rd2">Cada minuto sem resposta automática é um lead que seu concorrente está atendendo agora.</p>
+    <div class="reveal rd3">
+      <a href="#oferta" class="btn-mega">Quero ativar meu agente de voz agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="logo-bars" style="display:inline-flex;gap:2.5px;align-items:center;margin-right:8px;vertical-align:middle;">
+      <span style="display:inline-block;width:3px;height:7px;background:var(--cyan);border-radius:2px;"></span>
+      <span style="display:inline-block;width:3px;height:13px;background:var(--cyan);border-radius:2px;"></span>
+      <span style="display:inline-block;width:3px;height:19px;background:var(--cyan);border-radius:2px;"></span>
+      <span style="display:inline-block;width:3px;height:13px;background:var(--cyan);border-radius:2px;"></span>
+      <span style="display:inline-block;width:3px;height:7px;background:var(--cyan);border-radius:2px;"></span>
+    </div>
+    LabFuture
+  </div>
+  <div class="footer-copy">© 2025 <strong>LabFuture</strong> — Todos os direitos reservados</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
