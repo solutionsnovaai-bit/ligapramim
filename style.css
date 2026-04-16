@@ -274,13 +274,13 @@ nav.scrolled {
 /* The hero image — posicionamento correto, presença real */
 .hero-image {
   position: absolute;
-  right: -8%; 
-  bottom: 10%; /* SOBE o robô para não ficar enterrado no fundo */
-  height: 130vh; /* MUITO maior para ocupar o espaço */
+  right: 2%;
+  bottom: 0;
+  height: 96vh;
   width: auto;
-  max-width: 85%; 
+  max-width: 62%;
   object-fit: contain;
-  object-position: center center; /* Centraliza a imagem no container dela */
+  object-position: center bottom;
   z-index: 4;
   pointer-events: none;
   filter:
@@ -290,12 +290,11 @@ nav.scrolled {
     drop-shadow(0 -20px 80px rgba(0,200,255,.12));
   opacity: 0;
   animation: heroImageIn 1s ease .4s forwards;
-  transform-origin: bottom right;
 }
 
 @keyframes heroImageIn {
-  from { opacity: 0; transform: translateY(50px) scale(1.1); }
-  to   { opacity: 1; transform: translateY(0) scale(1.2); } /* Aplica um scale extra na animação final */
+  from { opacity: 0; transform: translateY(18px) scale(.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .hero-content {
@@ -434,9 +433,9 @@ nav.scrolled {
 /* Mobile hero */
 @media (max-width: 900px) {
   .hero-image {
-    right: -10%;
-    height: 90vh;
-    max-width: 85%;
+    right: -5%;
+    height: 80vh;
+    max-width: 75%;
     opacity: .6;
     filter: drop-shadow(0 0 50px rgba(123,47,255,.5));
   }
@@ -448,7 +447,7 @@ nav.scrolled {
   .hero-content { padding: 0 20px 64px; min-height: 100vh; }
   .hero-scroll { display: none; }
   .hero-sparkle { display: none; }
-  .hero-image { right: -15%; max-width: 100%; height: 65vh; opacity: .4; filter: none; }
+  .hero-image { right: -8%; max-width: 90%; height: 55vh; opacity: .35; filter: none; }
   .hero-energy { display: none; }
   .hero-title { font-size: clamp(60px, 19vw, 96px); }
   .hero-tags { gap: 6px; }
