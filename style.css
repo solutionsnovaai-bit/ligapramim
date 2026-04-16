@@ -1,9 +1,7 @@
 /* =====================================================
    Liga Pra Mim — LabFuture
-   style.css — Production-ready stylesheet (NEON UPDATE)
+   style.css — Production-ready stylesheet
    ===================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
 
 :root {
   --blue:    #2979FF;
@@ -169,31 +167,26 @@ nav.scrolled {
   gap: 12px;
 }
 
-/* BOTÃO DEMO ATUALIZADO: Glassmorphism / Pílula */
 .btn-demo {
   font-family: 'Syne', sans-serif;
-  font-weight: 600;
-  font-size: 11px;
-  letter-spacing: .1em;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .14em;
   text-transform: uppercase;
-  padding: 10px 24px;
-  color: var(--white);
-  background: rgba(0, 229, 255, 0.05);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--cyan);
-  border-radius: 40px; 
+  padding: 11px 26px;
+  border: 1.5px solid var(--cyan);
+  color: var(--black);
+  background: var(--cyan);
+  border-radius: 4px;
   cursor: none;
   transition: all .25s;
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 0 10px rgba(0, 229, 255, 0.1);
 }
 
 .btn-demo:hover {
-  background: rgba(0, 229, 255, 0.15);
-  box-shadow: 0 0 20px rgba(0,229,255,.4), inset 0 0 15px rgba(0,229,255,.3);
+  box-shadow: 0 0 28px rgba(0,229,255,.5), 0 0 60px rgba(0,229,255,.15);
   transform: translateY(-1px);
 }
 
@@ -223,17 +216,14 @@ nav.scrolled {
   .nav-account { display: none; }
 }
 
-/* ─── HERO ATUALIZADO ─── */
+/* ─── HERO ─── */
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center; /* Centralizado para combinar com o fundo 3D */
+  align-items: flex-end;
   overflow: hidden;
-  /* ATENÇÃO: Se for usar a imagem de fundo completa (robô + mesa), ative a linha abaixo e ajuste o nome do arquivo */
-  /* background: url('sua-imagem-3d-completa.webp') no-repeat center center; */
-  /* background-size: cover; */
-  background-color: #0a0416;
+  background: #0a0416;
 }
 
 #hero-canvas {
@@ -243,6 +233,7 @@ nav.scrolled {
   height: 100%;
 }
 
+/* Hero background deep purple gradient like reference */
 .hero::after {
   content: '';
   position: absolute;
@@ -266,83 +257,81 @@ nav.scrolled {
   z-index: 3;
 }
 
+/* The hero image — positioned right side, bottom-aligned */
 .hero-image {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 95%;
+  right: -2%;
+  bottom: -2%;
+  height: 102%;
   width: auto;
-  max-width: 62%;
+  max-width: 58%;
   object-fit: contain;
   object-position: right bottom;
   z-index: 2;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.1) 8%, black 20%);
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.1) 8%, black 20%);
+  /* glow roxo por trás do robô, igual ao mockup */
+  filter: drop-shadow(0 0 80px rgba(123,47,255,.55)) drop-shadow(0 0 140px rgba(80,20,140,.4));
 }
 
 .hero-content {
   position: relative;
   z-index: 10;
   width: 100%;
-  padding: 0 40px;
-  max-width: 720px;
+  padding: 0 40px 80px;
+  max-width: 600px;
 }
 
-/* EYEBROW ATUALIZADO: Fonte Manuscrita e Glow */
 .hero-eyebrow {
-  font-family: 'Caveat', cursive;
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: normal;
-  color: var(--cyan);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: .06em;
+  color: rgba(0,229,255,.75);
   margin-bottom: 16px;
   opacity: 0;
   animation: fadeUp .8s ease .3s forwards;
-  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.5));
 }
 
-/* TÍTULO ATUALIZADO: Neon Vazado / Hollow Text */
 .hero-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(88px, 13vw, 172px);
-  line-height: .88;
-  letter-spacing: .02em;
-  margin-bottom: 36px;
+  font-size: clamp(72px, 10.5vw, 148px);
+  line-height: .9;
+  letter-spacing: .03em;
+  /* gradient: blue → cyan → violet, matching the reference */
+  background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 35%, var(--violet) 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 50px rgba(41,121,255,.35)) drop-shadow(0 0 100px rgba(123,47,255,.2));
   opacity: 0;
   animation: fadeUp .85s ease .5s forwards;
-  
-  color: transparent;
-  -webkit-text-stroke: 2px transparent;
-  background: linear-gradient(180deg, #b864ff 0%, var(--cyan) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.4));
+  margin-bottom: 36px;
 }
 
-/* TAGS ATUALIZADAS: Laranja, vazadas e maiores */
+/* Tag pills at bottom of hero — like the reference screenshot */
 .hero-tags {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
   opacity: 0;
   animation: fadeUp .8s ease .75s forwards;
-  position: relative;
-  z-index: 20;
 }
 
 .tag-pill {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 18px;
-  letter-spacing: .08em;
-  padding: 6px 14px;
-  border-radius: 4px;
-  color: var(--orange);
-  background: transparent;
-  border: 1px solid var(--orange);
-  box-shadow: inset 0 0 8px rgba(255, 109, 0, 0.15), 0 0 8px rgba(255, 109, 0, 0.2);
+  font-family: 'Syne', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: 3px;
+  color: var(--amber);
+  border: 1px solid var(--amber);
+  background: rgba(255,179,0,.06);
 }
 
+/* Scroll indicator */
 .hero-scroll {
   position: absolute;
   bottom: 32px;
@@ -377,6 +366,7 @@ nav.scrolled {
   font-family: 'Syne', sans-serif;
 }
 
+/* Corner sparkle */
 .hero-sparkle {
   position: absolute;
   bottom: 28px;
@@ -404,25 +394,25 @@ nav.scrolled {
   to   { opacity: 1; }
 }
 
+/* Mobile hero */
 @media (max-width: 900px) {
   .hero-image {
-    max-width: 75%;
-    height: 70%;
-    opacity: .5;
-    -webkit-mask-image: none;
-    mask-image: none;
+    max-width: 72%;
+    height: 68%;
+    opacity: .55;
+    filter: drop-shadow(0 0 40px rgba(123,47,255,.4));
   }
-  .hero-title { font-size: clamp(72px, 18vw, 120px); }
+  .hero-title { font-size: clamp(64px, 15vw, 110px); }
 }
 
 @media (max-width: 600px) {
   .hero-content { padding: 0 20px 64px; }
   .hero-scroll { display: none; }
   .hero-sparkle { display: none; }
-  .hero-image { max-width: 85%; height: 55%; opacity: .35; }
-  .hero-title { font-size: clamp(64px, 22vw, 100px); }
+  .hero-image { max-width: 82%; height: 52%; opacity: .35; filter: none; }
+  .hero-title { font-size: clamp(60px, 19vw, 96px); }
   .hero-tags { gap: 6px; }
-  .tag-pill { font-size: 14px; padding: 4px 10px; }
+  .tag-pill { font-size: 8px; padding: 6px 10px; }
 }
 
 /* ─── TICKER ─── */
