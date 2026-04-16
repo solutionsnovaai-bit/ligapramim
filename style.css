@@ -274,13 +274,13 @@ nav.scrolled {
 /* The hero image — posicionamento correto, presença real */
 .hero-image {
   position: absolute;
-  right: -5%; /* Move um pouco para a direita para preencher melhor */
-  bottom: -5%; /* Ajusta para evitar corte seco na base se necessário */
-  height: 110vh; /* Aumenta a altura para ele ficar imponente */
+  right: -8%; 
+  bottom: 10%; /* SOBE o robô para não ficar enterrado no fundo */
+  height: 130vh; /* MUITO maior para ocupar o espaço */
   width: auto;
-  max-width: 75%; /* Permite que ele cresça mais horizontalmente */
+  max-width: 85%; 
   object-fit: contain;
-  object-position: center bottom;
+  object-position: center center; /* Centraliza a imagem no container dela */
   z-index: 4;
   pointer-events: none;
   filter:
@@ -290,11 +290,12 @@ nav.scrolled {
     drop-shadow(0 -20px 80px rgba(0,200,255,.12));
   opacity: 0;
   animation: heroImageIn 1s ease .4s forwards;
+  transform-origin: bottom right;
 }
 
 @keyframes heroImageIn {
-  from { opacity: 0; transform: translateY(18px) scale(.98); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  from { opacity: 0; transform: translateY(50px) scale(1.1); }
+  to   { opacity: 1; transform: translateY(0) scale(1.2); } /* Aplica um scale extra na animação final */
 }
 
 .hero-content {
