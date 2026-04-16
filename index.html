@@ -37,6 +37,91 @@
 <section class="hero">
   <canvas id="hero-canvas"></canvas>
   <div class="hero-gradient"></div>
+
+  <!-- Ondas de energia SVG animadas — por trás do robô, igual à referência -->
+  <svg class="hero-energy" viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <radialGradient id="eg1" cx="55%" cy="45%" r="55%">
+        <stop offset="0%" stop-color="rgba(120,40,220,.18)"/>
+        <stop offset="100%" stop-color="transparent"/>
+      </radialGradient>
+      <!-- wave paths -->
+      <filter id="blur1"><feGaussianBlur stdDeviation="3"/></filter>
+    </defs>
+    <!-- Glow central roxo -->
+    <ellipse cx="480" cy="310" rx="360" ry="280" fill="url(#eg1)"/>
+    <!-- Ondas fluidas -->
+    <g opacity=".55" filter="url(#blur1)">
+      <path d="M 600 80 Q 520 200 580 320 Q 640 440 560 560" stroke="#9040ff" stroke-width="1.5" fill="none" opacity=".7">
+        <animate attributeName="d" dur="6s" repeatCount="indefinite"
+          values="M 600 80 Q 520 200 580 320 Q 640 440 560 560;
+                  M 620 80 Q 500 210 570 340 Q 630 460 550 570;
+                  M 600 80 Q 520 200 580 320 Q 640 440 560 560"/>
+      </path>
+      <path d="M 650 100 Q 560 230 620 360 Q 680 470 590 590" stroke="#7030ee" stroke-width="1" fill="none" opacity=".5">
+        <animate attributeName="d" dur="7s" repeatCount="indefinite"
+          values="M 650 100 Q 560 230 620 360 Q 680 470 590 590;
+                  M 630 90 Q 580 240 640 370 Q 700 480 610 600;
+                  M 650 100 Q 560 230 620 360 Q 680 470 590 590"/>
+      </path>
+      <path d="M 700 120 Q 600 260 680 390 Q 730 490 640 610" stroke="#5520cc" stroke-width="1" fill="none" opacity=".4">
+        <animate attributeName="d" dur="8s" repeatCount="indefinite"
+          values="M 700 120 Q 600 260 680 390 Q 730 490 640 610;
+                  M 680 110 Q 620 270 700 400 Q 750 500 660 620;
+                  M 700 120 Q 600 260 680 390 Q 730 490 640 610"/>
+      </path>
+      <!-- Ondas ciano mais finas -->
+      <path d="M 750 200 Q 660 300 700 420 Q 720 490 670 580" stroke="#00ccff" stroke-width="0.8" fill="none" opacity=".35">
+        <animate attributeName="d" dur="9s" repeatCount="indefinite"
+          values="M 750 200 Q 660 300 700 420 Q 720 490 670 580;
+                  M 730 190 Q 680 310 720 430 Q 740 500 690 590;
+                  M 750 200 Q 660 300 700 420 Q 720 490 670 580"/>
+      </path>
+      <path d="M 550 60 Q 490 180 540 300 Q 600 420 530 540" stroke="#00aaff" stroke-width="0.8" fill="none" opacity=".3">
+        <animate attributeName="d" dur="10s" repeatCount="indefinite"
+          values="M 550 60 Q 490 180 540 300 Q 600 420 530 540;
+                  M 570 55 Q 510 190 560 310 Q 620 430 550 550;
+                  M 550 60 Q 490 180 540 300 Q 600 420 530 540"/>
+      </path>
+      <!-- Linha dourada sutil -->
+      <path d="M 520 500 Q 620 520 700 490 Q 760 465 780 440" stroke="#ffaa00" stroke-width="0.7" fill="none" opacity=".3">
+        <animate attributeName="d" dur="5s" repeatCount="indefinite"
+          values="M 520 500 Q 620 520 700 490 Q 760 465 780 440;
+                  M 530 510 Q 630 530 710 500 Q 770 472 790 445;
+                  M 520 500 Q 620 520 700 490 Q 760 465 780 440"/>
+      </path>
+    </g>
+    <!-- Pontos de luz — nós da rede neural -->
+    <g>
+      <circle cx="590" cy="160" r="3" fill="#aa55ff" opacity=".8"><animate attributeName="opacity" dur="2.5s" repeatCount="indefinite" values=".8;.3;.8"/></circle>
+      <circle cx="660" cy="240" r="2" fill="#7733ee" opacity=".6"><animate attributeName="opacity" dur="3s" repeatCount="indefinite" values=".6;.2;.6"/></circle>
+      <circle cx="720" cy="350" r="2.5" fill="#9040ff" opacity=".7"><animate attributeName="opacity" dur="2s" repeatCount="indefinite" values=".7;.25;.7"/></circle>
+      <circle cx="640" cy="450" r="2" fill="#00ccff" opacity=".5"><animate attributeName="opacity" dur="3.5s" repeatCount="indefinite" values=".5;.15;.5"/></circle>
+      <circle cx="700" cy="520" r="3" fill="#5522bb" opacity=".65"><animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" values=".65;.2;.65"/></circle>
+      <circle cx="750" cy="180" r="2" fill="#00aaff" opacity=".45"><animate attributeName="opacity" dur="4s" repeatCount="indefinite" values=".45;.1;.45"/></circle>
+      <circle cx="560" cy="420" r="2.5" fill="#cc88ff" opacity=".6"><animate attributeName="opacity" dur="3.2s" repeatCount="indefinite" values=".6;.2;.6"/></circle>
+      <circle cx="680" cy="130" r="2" fill="#ffaa00" opacity=".4"><animate attributeName="opacity" dur="4.5s" repeatCount="indefinite" values=".4;.1;.4"/></circle>
+      <!-- Losangos geométricos como na referência -->
+      <polygon points="620,90 628,100 620,110 612,100" fill="none" stroke="#7733ee" stroke-width="1" opacity=".5">
+        <animate attributeName="opacity" dur="3s" repeatCount="indefinite" values=".5;.15;.5"/>
+      </polygon>
+      <polygon points="740,270 750,283 740,296 730,283" fill="none" stroke="#9944ff" stroke-width="1" opacity=".4">
+        <animate attributeName="opacity" dur="4s" repeatCount="indefinite" values=".4;.1;.4"/>
+      </polygon>
+      <polygon points="690,480 699,492 690,504 681,492" fill="none" stroke="#5522cc" stroke-width="1" opacity=".35">
+        <animate attributeName="opacity" dur="3.5s" repeatCount="indefinite" values=".35;.08;.35"/>
+      </polygon>
+    </g>
+    <!-- Linhas de conexão entre nós -->
+    <g opacity=".25" stroke="#8833ff" stroke-width="0.5">
+      <line x1="590" y1="160" x2="660" y2="240"><animate attributeName="opacity" dur="3s" repeatCount="indefinite" values=".25;.08;.25"/></line>
+      <line x1="660" y1="240" x2="720" y2="350"><animate attributeName="opacity" dur="4s" repeatCount="indefinite" values=".25;.05;.25"/></line>
+      <line x1="720" y1="350" x2="640" y2="450"><animate attributeName="opacity" dur="3.5s" repeatCount="indefinite" values=".25;.08;.25"/></line>
+      <line x1="640" y1="450" x2="700" y2="520"><animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" values=".25;.06;.25"/></line>
+      <line x1="590" y1="160" x2="750" y2="180"><animate attributeName="opacity" dur="5s" repeatCount="indefinite" values=".25;.08;.25"/></line>
+    </g>
+  </svg>
+
   <img class="hero-image" src="assets/hero.png" alt="Agente de voz LabFuture" loading="eager">
   <div class="hero-content">
     <p class="hero-eyebrow">seu negócio ligando enquanto você dorme</p>
