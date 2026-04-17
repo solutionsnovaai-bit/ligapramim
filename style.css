@@ -223,7 +223,7 @@ nav.scrolled {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  background: #06021a;
+  background: #08051a;
 }
 
 #hero-canvas {
@@ -233,29 +233,33 @@ nav.scrolled {
   height: 100%;
 }
 
-/* Hero background — roxo profundo igual à referência */
+/* Imagem de fundo full-width — a cena completa gerada pelo Gemini */
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hero background — overlay pra dar profundidade e legibilidade no texto */
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 75% 90% at 68% 48%, rgba(90,20,160,.75) 0%, rgba(50,10,100,.4) 45%, transparent 70%),
-    radial-gradient(ellipse 50% 60% at 88% 65%, rgba(70,10,130,.55) 0%, transparent 55%),
-    radial-gradient(ellipse 35% 45% at 55% 15%, rgba(40,5,90,.35) 0%, transparent 55%),
-    radial-gradient(ellipse 20% 30% at 72% 30%, rgba(120,40,200,.25) 0%, transparent 50%),
-    linear-gradient(180deg, rgba(6,2,26,1) 0%, rgba(15,5,45,.6) 45%, rgba(6,2,26,1) 100%);
+    linear-gradient(to right, rgba(5,2,20,.92) 0%, rgba(5,2,20,.75) 30%, rgba(5,2,20,.25) 55%, transparent 75%),
+    linear-gradient(to top, rgba(5,2,20,1) 0%, rgba(5,2,20,.5) 10%, transparent 30%),
+    linear-gradient(to bottom, rgba(5,2,20,.8) 0%, transparent 14%);
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-gradient {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to right, rgba(6,2,26,.97) 30%, rgba(6,2,26,.65) 52%, rgba(6,2,26,.1) 75%, transparent 88%),
-    linear-gradient(to top, rgba(6,2,26,1) 0%, rgba(6,2,26,.6) 18%, transparent 42%),
-    linear-gradient(to bottom, rgba(6,2,26,.85) 0%, transparent 16%);
-  z-index: 3;
+  display: none;
 }
 
 /* SVG ondas de energia por trás do robô */
@@ -271,31 +275,9 @@ nav.scrolled {
   animation: fadeIn 1.2s ease .8s forwards;
 }
 
-/* The hero image — GIGANTE, blend-mode queima o fundo preto sem artefatos */
+/* Hero image antiga — escondida, agora usamos bg full-width */
 .hero-image {
-  position: absolute;
-  right: -6%;
-  bottom: -6%;
-  height: 115vh;
-  width: auto;
-  max-width: none;
-  object-fit: contain;
-  object-position: right bottom;
-  z-index: 4;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  filter:
-    drop-shadow(0 0 80px rgba(123,47,255,.95))
-    drop-shadow(0 0 180px rgba(80,20,160,.75))
-    drop-shadow(0 0 320px rgba(50,10,120,.55))
-    drop-shadow(0 -30px 140px rgba(0,200,255,.25));
-  opacity: 0;
-  animation: heroImageIn 1s ease .4s forwards;
-}
-
-@keyframes heroImageIn {
-  from { opacity: 0; transform: translateY(18px) scale(.98); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  display: none;
 }
 
 .hero-content {
