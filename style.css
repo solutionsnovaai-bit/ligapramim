@@ -271,23 +271,24 @@ nav.scrolled {
   animation: fadeIn 1.2s ease .8s forwards;
 }
 
-/* The hero image — posicionamento correto, presença real */
+/* The hero image — GIGANTE, blend-mode queima o fundo preto sem artefatos */
 .hero-image {
   position: absolute;
-  right: 2%;
-  bottom: 0;
-  height: 96vh;
+  right: -6%;
+  bottom: -6%;
+  height: 115vh;
   width: auto;
-  max-width: 62%;
+  max-width: none;
   object-fit: contain;
-  object-position: center bottom;
+  object-position: right bottom;
   z-index: 4;
   pointer-events: none;
+  mix-blend-mode: screen;
   filter:
-    drop-shadow(0 0 60px rgba(123,47,255,.7))
-    drop-shadow(0 0 120px rgba(80,20,160,.5))
-    drop-shadow(0 0 200px rgba(50,10,120,.35))
-    drop-shadow(0 -20px 80px rgba(0,200,255,.12));
+    drop-shadow(0 0 80px rgba(123,47,255,.95))
+    drop-shadow(0 0 180px rgba(80,20,160,.75))
+    drop-shadow(0 0 320px rgba(50,10,120,.55))
+    drop-shadow(0 -30px 140px rgba(0,200,255,.25));
   opacity: 0;
   animation: heroImageIn 1s ease .4s forwards;
 }
